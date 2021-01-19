@@ -1,0 +1,19 @@
+
+echo "Moving files to /bin/"
+echo "0/2"
+sudo mv ./DShutdown /bin/
+echo "1/2"
+sudo mv ./DWebhook  /bin/
+echo "2/2"
+
+echo "Done."
+
+echo "Granting perms"
+
+echo "0/2"
+sudo chmod 777 /bin/DShutdown
+echo "1/2"
+sudo chmod 777 /bin/DWebhook
+echo "2/2"
+
+echo "Done."
