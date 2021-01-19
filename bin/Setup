@@ -23,9 +23,9 @@ if [ -z ${DISCORD_NOTIFIER_WEBHOOK_URL+x} ]; then
       # Append the text by using '>>' symbol
       
       export DISCORD_NOTIFIER_WEBHOOK_URL=$WebURL
-      echo "export DISCORD_NOTIFIER_WEBHOOK_URL=$WebURL" >> ~/.profile
-      shll="Server has now started." 
-      echo "DWebhook $shll" >> ~/.profile
+      echo "0 */6 * * * export DISCORD_NOTIFIER_WEBHOOK_URL=$WebURL" >> /etc/crontab   
+      shll="A user has logged in." 
+      echo "@reboot DWebhook $shll" >> /etc/crontab
     fi
 fi
 
@@ -35,3 +35,4 @@ echo "------------------------------------------------------------------------"
 echo "Webhook url is: $DISCORD_NOTIFIER_WEBHOOK_URL"
 echo "Goto ~/.profile to edit it"
 DWebhook "Completed installation! <3"
+
