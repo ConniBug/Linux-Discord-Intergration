@@ -1,12 +1,10 @@
 # Linux Discord Intergration
  
-# # Setting vars for webhook url
-sudo nano ~/.profile
+Installation steps!
 
-add at the bottom 
+1. Run sudo chmod 777 ./Setup
 
-export DISCORD_NOTIFIER_WEBHOOK_URL=<url here>
+2. Run ./Setup
+follow instructions on screen
 
-# # Move file to bin
-
-Move all files from ./bin to 
+2. Done

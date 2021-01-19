@@ -2,9 +2,7 @@
 while test $# -gt 0; do
   case "$1" in
     -i|--info)
-      echo "Linux Discord Intergration"
-      echo "Maintainer - Conni!~#0920"
-      echo "GitHub - https://github.com/ConniTheKiwi/Linux-Discord-Intergration"
+      DInfo
       exit 0
       ;;
     *)

@@ -1,25 +1,20 @@
+function registerFile() {
+    echo "Registering file ./$1"
+    sudo cp ./$1 /bin/
+    echo "$2/3 Moving ./$1 to /bin/$1"
+    echo "Granting 777 perms to /bin/$1"
+    sudo chmod 777 /bin/$1
+}
 
-echo "Moving files to /bin/"
-echo "0/2"
-sudo mv ./DShutdown /bin/
-echo "1/2"
-sudo mv ./DWebhook  /bin/
-echo "2/2"
-
-echo "Done."
-
-echo "Granting perms"
-
-echo "0/2"
-sudo chmod 777 /bin/DShutdown
-echo "1/2"
-sudo chmod 777 /bin/DWebhook
-echo "2/2"
-
+./DInfo
+echo "Setting up."
+registerFile "DShutdown" "1"
+registerFile "DWebhook" "2"
+registerFile "DInfo" "3"
 echo "Done."
 
 # Type the text that you want to append
-read -p "Webhook URL:" WebURL
+read -p "Webhook URL: " WebURL
 
 # Check the new text is empty or not
 if [ "$WebURL" != "" ]; then
@@ -28,3 +23,5 @@ if [ "$WebURL" != "" ]; then
       echo "export DISCORD_NOTIFIER_WEBHOOK_URL=$WebURL" >> ~/.profile
 
 fi
+
+DWebhook "Completed installation! <3"
