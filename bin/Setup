@@ -17,3 +17,14 @@ sudo chmod 777 /bin/DWebhook
 echo "2/2"
 
 echo "Done."
+
+# Type the text that you want to append
+read -p "Webhook URL:" WebURL
+
+# Check the new text is empty or not
+if [ "$WebURL" != "" ]; then
+      sudo cp  ~/.profile ~/.profile.old
+      # Append the text by using '>>' symbol
+      echo "export DISCORD_NOTIFIER_WEBHOOK_URL=$WebURL" >> ~/.profile
+
+fi
