@@ -1,9 +1,11 @@
 function registerFile() {
+    echo "--------------------------------"
     echo "Registering file ./$1"
     sudo cp ./$1 /bin/
     echo "$2/3 Moving ./$1 to /bin/$1"
     echo "Granting 777 perms to /bin/$1"
     sudo chmod 777 /bin/$1
+    echo "--------------------------------"
 }
 
 ./DInfo
