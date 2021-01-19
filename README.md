@@ -25,3 +25,7 @@ on server start notifications
 follow instructions on screen
 
 2. Done
+
+# # Currently Tested On
+
+- Ubuntu 20.04.1 LTS
